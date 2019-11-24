@@ -19,7 +19,15 @@ android {
 }
 
 dependencies {
-    implementation findDependency(':support-v4', 'com.android.support:support-v4:23.3.+')
+    def core_version = "1.1.0"
+
+    implementation 'androidx.annotation:annotation:1.0.2'
+    implementation "androidx.core:core:$core_version"
+
+}
+
+repositories {
+    google()
 }
 
 Dependency findDependency(String projectName, String moduleName) {
